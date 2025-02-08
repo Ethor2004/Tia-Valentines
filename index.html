@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="Song.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" onclick="toggleMusic()">🔊</button>
+
+    <div class="progress-bar"><div class="progress"></div></div>
+
+    <!-- Section-Specific Image Border -->
+    <div class="image-border">
+        <img src="intro.jpg" id="section-image" class="border-img">
+    </div>
+
+    <div class="container">
+        <div class="section active" id="intro">
+            <h1>Once upon a time in December 2012...</h1>
+            <p>At a house party in Sealdah, a boy met a girl named Tia...</p>
+            <p>She was an angel who loved to dance. But when she asked him to dance, he ran away and hugged a pole.</p>
+            <button onclick="nextStep('event-2019')">Begin Our Love Story</button>
+        </div>
+
+        <div class="section" id="event-2019">
+            <h2>August 2019</h2>
+            <p>Texted You for the first time... You blocked me 😂</p>
+            <button onclick="nextStep('event-2021')">Next</button>
+        </div>
+
+        <div class="section" id="event-2021">
+            <h2>May 2021</h2>
+            <p>Slid into your DMs with "Hey… what’s up?... Got blocked again😑... annnnnywayyy.. texted again ...Sent Ratatouille filter pics on Snapchat just to make you laugh. 😜😜</p>
+            <p>led to playing PUBG at 7am?... uhhh the rest is left unsaid lol" 🎮</p>
+            <button onclick="nextStep('event-2022')">Next</button>
+        </div>
+
+
+        <div class="section" id="event-2022">
+            <h2>October 29, 2022</h2>
+            <p>Halloween... sat on the roof stairs.... aaaaaaand YOU KISSED ME FIRST. 💋</p>
+            <p>Every moment since has been a dream.</p>
+            <button onclick="nextStep('love-letter')">Next</button>
+        </div>
+
+        <div class="section" id="love-letter">
+            <h2>Dear Bunny,</h2>
+            <p>I adore you more than u could ever know. Honestly, after everything we have been through recently.. I was scared .. scared of losing the single most important thing in my life. I know I havent been the best bf to you of late even though u tell me otherwise, but i promise u baby, i am committed to us and i will do anything and everything it takes to be with you forever because theres nothing in this planet more important to me than you are. No distance or any obstacle can stop us being together. I love everything about you, ur perfect attirbutes and ur imperfections make u who u are and i just am blessed to know u, let alone call u mine. I never take u for granted ever cuz i know just how lucky i am that u chose me. Even though ur slightly annoying lol, i would rather be in a lon distance with you than in a relationship with any other girl in this world. I hope you know just how much i love u. If u dont and its because of how i have been treating you, i promise i will do everything to show u everyday just how happy u  make me. From the first day I saw u all those years ago I knew u were always meant for me and from hugging that pole I now get to hug the love of my life and I feel loved and safe in ur arms.. it’s the best feeling … thank u for everything u do for me every little bit u do for me warms my heart and it just makes me happy and I want that feeling forever. thank u for tolerating all my rubbish ,my drama my rudeness but I just want u to know ur baby boy always will be by u and will never ever let u down ❤️❤️</p>
+            <p>sooooo.... I just have one thing i wanna ask you.👀👀👀</p>
+            <button onclick="nextStep('valentine')">Continue</button>
+        </div>
+
+        <div class="section" id="valentine">
+            <h2>Bunny, Will You Be My Valentine? 💝</h2>
+            <div class="buttons">
+                <button onclick="yesAnswer()">Yes, My Bumz ❤️</button>
+                <button onclick="yesAnswer()">NO GO AWAY U SUCK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-hearts hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
