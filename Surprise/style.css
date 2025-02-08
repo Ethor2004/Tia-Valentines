@@ -1,0 +1,104 @@
+/* General Styling */
+body {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    background-color: #ffebe8;
+    color: #b30000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sections with Smooth Fade Animation */
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 1.8s ease-in-out, transform 1.8s ease-in-out;
+    transform: translateY(40px);
+}
+
+.section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image Borders */
+.image-border {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.image-border img {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Love Message & Image Styling */
+.final-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1000;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.love-message h1 {
+    font-size: 3rem;
+    color: #ff0000;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    animation: scaleUp 1.5s ease-in-out infinite alternate;
+}
+
+.love-image {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Floating Hearts Animation */
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1001;
+    animation: floatHearts 10s infinite linear;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100vh); }
+}
